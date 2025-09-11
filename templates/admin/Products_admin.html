@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STS - Products</title>
+  <link rel="stylesheet" href="{{url_for('static' ,filename = 'own_access.css')}}">
+</head>
+<body>
+
+<header class="header">
+    <h1>Special Tea Shop</h1>
+</header>
+<div class="side-menu">
+    <ul>
+         <li><a href="{{url_for('general_api.admin_dashboard')}}">Access</a></li>
+        <li><a href="{{url_for('general_api.product_admin')}}">Products</a></li>
+        <li><a href="{{url_for('general_api.settings_admin')}}">Settings</a></li>
+        <li><a href="{{ url_for('general_api.logout') }}">Logout</a></li>
+    </ul>
+
+</div>
+
+  <div class="Container">
+    <div class="add-staff">
+      <ul>
+        <li><a href="{{url_for('general_api.add_product_admin')}}">ADD PRODUCT</a></li>
+      </ul>
+    </div>
+    <div class="list-staff">
+      <ul>
+        <li><a href="{{url_for('view_product_admin_api.view_product')}}">LIST ALL PRODUCT</a></li>
+      </ul>
+    </div>
+
+    </div>
+</body>
+</html>

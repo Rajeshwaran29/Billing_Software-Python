@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STS - Owner Access</title>
+  <link rel="stylesheet" href="{{url_for('static' ,filename = 'own_access.css')}}">
+</head>
+<body>
+
+<header class="header">
+    <h1>Special Tea Shop</h1>
+</header>
+<div class="side-menu">
+    <ul>
+      <li><a href="{{url_for('general_api.owner_dashboard')}}">Home</a></li>
+        <li><a href="{{url_for('general_api.access_own')}}">Access</a></li>
+        <li><a href="{{url_for('general_api.settings_own')}}">Settings</a></li>
+        <li><a href="{{ url_for('general_api.logout') }}">Logout</a></li>
+    </ul>
+
+</div>
+
+  <div class="Container">
+    <div class="add-staff">
+      <ul>
+        <li><a href="{{url_for('general_api.add_staff_by_owner')}}">ADD STAFF</a></li>
+      </ul>
+    </div>
+    <div class="add-admin">
+      <ul>
+        <li> <a href="{{url_for('general_api.add_admin_by_owner')}}">ADD ADMIN</a></li>
+      </ul>
+    </div>
+    <div class="list-staff">
+      <ul>
+        <li><a href="{{url_for('view_api.view_users_owner')}}">LIST ALL STAFF</a></li>
+      </ul>
+    </div>
+    <div class="list-admin">
+      <ul>
+        <li><a href="{{url_for('view_admin_api.view_admin_owner')}}">LIST ALL ADMIN</a></li>
+      </ul>
+    </div>
+    </div>
+</body>
+</html>

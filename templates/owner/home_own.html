@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STS-Owner Home</title>
+  <link rel="stylesheet" href="{{url_for('static' ,filename = 'own_access.css')}}">
+</head>
+<body>
+<header class="header">
+    <h1>Special Tea Shop</h1>
+</header>
+<div class="side-menu">
+    <ul>
+        <li><a href="{{url_for('general_api.owner_dashboard')}}">Home</a></li>
+        <li><a href="{{url_for('general_api.access_own')}}">Access</a></li>
+        <li><a href="{{url_for('general_api.settings_own')}}">Settings</a></li>
+        <li><a href="{{ url_for('general_api.logout') }}">Logout</a></li>
+    </ul>
+</div>
+
+<div class="Pie_chart">
+
+</div>
+</body>
+</html>

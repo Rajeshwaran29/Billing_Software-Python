@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Special Tea Shop - Home</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header class="header">
+    <h1>Special Tea Shop</h1>
+</header>
+
+
+  <form action="/signin" method="post">
+
+    <label for="employee_name">Username</label><br>
+    <input type="text" id="employee_name" name="employee_name" required><br><br>
+
+
+    <label for="employee_password">Password</label><br>
+    <input type="password" id="employee_password" name="employee_password" required><br><br>
+
+
+    <fieldset>
+      <legend>Role</legend>
+      <label>
+        <input type="radio" name="role" value="staff" checked>
+        Staff
+      </label>
+      <label>
+        <input type="radio" name="role" value="admin">
+        Admin
+      </label>
+      <label>
+        <input type="radio" name="role" value="owner">
+        Owner
+      </label>
+    </fieldset>
+    <br>
+
+
+    <button type="submit">Sign In</button>
+  </form>
+</body>
+</html>

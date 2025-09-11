@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Special Tea Shop - Billing</title>
+  <link rel="stylesheet" href="{{url_for('static' ,filename = 'billing.css')}}">
+</head>
+<body>
+
+<header class="header">
+  <h1>Special Tea Shop - Billing</h1>
+  <div class="nav-bar">
+    <ul>
+      <li><a href="">Product List</a></li>
+      <li><a href="{{ url_for('general_api.logout') }}">Logout</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="billing-container">
+
+  <div class="search-bar">
+    <input type="text" id="product-search" placeholder="Search Product...">
+    <button type="button" onclick="addProduct()">Add Product</button>
+  </div>
+
+ <form method="POST" action="{{url_for('billing_api.save_bill')}}">
+  <table class="billing-table" id="billing-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- dynamic rows will be added here -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Grand Total</td>
+        <td id="grand-total">0</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+  <button type="submit">Save Bill</button>
+</form>
+
+
+
+  <div class="print-btn">
+    <button onclick="window.print()">🖨 Print Bill</button>
+  </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
