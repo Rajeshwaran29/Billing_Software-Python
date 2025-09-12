@@ -1,4 +1,4 @@
-from flask import Flask , render_template , request , url_for , Blueprint ,session , redirect ,flash
+from flask import Flask , render_template , request , url_for , Blueprint ,session , redirect ,flash ,jsonify
 from db import get_db_connection
 
 
@@ -37,7 +37,7 @@ def signin():
         session["user_employee_name"] = user["employee_name"]
         session["role_type"] = user["role_type"]
 
-       
+
         if selected_role == "owner":
             return redirect(url_for("general_api.owner_dashboard"))
         elif selected_role == "admin":

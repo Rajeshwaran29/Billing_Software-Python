@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>STS-Owner Home</title>
   <link rel="stylesheet" href="{{url_for('static' ,filename = 'own_access.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="header">
@@ -19,7 +20,9 @@
 </div>
 
 <div class="Pie_chart">
-
+  <canvas id="myPieChart" width="400" height="400"></canvas>
 </div>
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
 </body>
+
 </html>

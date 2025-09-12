@@ -1,4 +1,5 @@
-from flask import Flask , render_template
+from flask import Flask , render_template ,jsonify
+from db import get_db_connection
 from routes.add_api.add_user_owner import add_bp
 from routes.add_api.add_admin_owner import admin_bp
 from routes.add_api.add_product import product_bp
@@ -29,6 +30,9 @@ app.register_blueprint(billing_bp , url_prefix="")
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+
 
 
 if __name__ == '__main__':
