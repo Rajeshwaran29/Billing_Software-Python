@@ -10,8 +10,13 @@
 <header class="header">
   <h1>Special Tea Shop - Billing</h1>
   <div class="nav-bar">
+      <div class="menu">
+      <button class="menu-btn" onclick="toggleDropdown()">Product List</button>
+      <div class="dropdown" id="miniScreen">
+        <iframe src="/view_product_staff"></iframe>
+      </div>
+    </div>
     <ul>
-      <li><a href="">Product List</a></li>
       <li><a href="{{ url_for('general_api.logout') }}">Logout</a></li>
     </ul>
   </div>
@@ -23,7 +28,7 @@
     <input type="text" id="product-search" placeholder="Search Product...">
     <button type="button" onclick="addProduct()">Add Product</button>
   </div>
-
+<div id="bill">
  <form method="POST" action="{{url_for('billing_api.save_bill')}}">
   <table class="billing-table" id="billing-table">
     <thead>
@@ -49,11 +54,13 @@
   </table>
 
 </form>
+</div>
+
 
 
 
   <div class="print-btn">
-    <button onclick="window.print()">🖨 Print Bill</button>
+    <button onclick="printDiv('bill')">🖨 Print Bill</button>
   </div>
 
 </div>

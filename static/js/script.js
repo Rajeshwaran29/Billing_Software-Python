@@ -79,3 +79,19 @@ function saveBill() {
     .then(data => alert(data))
     .catch(err => alert("Error: " + err));
 }
+ function printDiv(bill) {
+      // Get the content of the div
+      var content = document.getElementById(bill).innerHTML;
+
+      // Open a new window
+      var printWindow = window.open('', '', 'height=500,width=800');
+
+      // Write content into it
+      printWindow.document.write('<html><head><title>Print</title></head><body>');
+      printWindow.document.write(content);
+      printWindow.document.write('</body></html>');
+
+      // Print and close
+      printWindow.document.close();
+      printWindow.print();
+    }

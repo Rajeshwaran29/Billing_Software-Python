@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product-List</title>
+     <link rel="stylesheet" href="{{url_for('static' ,filename = 'billing.css')}}">
+</head>
+<body>
+<h3>Product List</h3>
+<div>
+   <table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>PRODUCT</th>
+      <th>PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in products %}
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.product_name }}</td>
+      <td>₹{{ product.price }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</div>
+<script src="{{ url_for('static', filename='js/billing.js') }}"></script>
+</body>
+</html>

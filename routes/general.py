@@ -111,3 +111,5 @@ def settings_admin():
 def staff_dashboard():
     return render_template("staff/staff_billing.html")
 
+general_bp.route("produ")
+
